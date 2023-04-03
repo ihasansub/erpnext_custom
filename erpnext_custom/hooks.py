@@ -34,10 +34,12 @@ app_license = "MIT"
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
 
+doctype_js = {"Purchase Order" : "public/js/purchase_order.js"}
+
 # Home Pages
 # ----------
 
-# application home page (will override Website Settings)
+# application home page (will overrides Website Settings)
 # home_page = "login"
 
 # website user home page (by Role)
@@ -63,7 +65,7 @@ app_license = "MIT"
 # Installation
 # ------------
 
-# before_install = "erpnext_custom.install.before_install"
+# before_inostall = "erpnext_custom.install.before_install"
 # after_install = "erpnext_custom.install.after_install"
 
 # Uninstallation
@@ -97,6 +99,10 @@ app_license = "MIT"
 # override_doctype_class = {
 #	"ToDo": "custom_app.overrides.CustomToDo"
 # }
+
+override_doctype_class = {
+	"Sales Invoice": "erpnext_custom.erpnext_custom.overrides.sales_invoice_override.SalesInvoiceCustom"
+}
 
 # Document Events
 # ---------------
